@@ -1,0 +1,172 @@
+:root{
+  --bg:    #282828; /* background color */
+  --bg0_h: #1d2021; /* background highlight */
+  --bg1:   #3c3836;
+  --bg2:   #504945;
+  --bg3:   #665c54;
+  --bg4:   #7c6f64;
+  --fg:    #ebdbb2; /* foreground elements */
+  --blue:  #458588;
+  --lblue: #83a598;
+  --red:   #cc241d;
+  --aqua:  #689d6a;
+  --laqua: #8ec07c;
+  --gray:  #a89984;
+  --darkgray: #928374;
+}
+
+/*
+ * General settings
+ * */
+
+body {
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Set everything to IBM Plex mono and fg by default */
+
+h1, h2, h3, h4, p, a {
+  /* font-family: Courier New; */
+  font-family: IBM Plex Mono, monospace;
+  color: var(--fg);
+}
+
+p {
+  font-family: IBM Plex Sans, sans-serif;
+  word-break: normal;
+  hyphens: auto;
+}
+
+/*
+ * General containers
+ * */
+
+div#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 25cm;
+  min-width: 10cm;
+}
+
+/*
+ * Header Bar
+ * */
+.headerbar {
+  display: flex;
+  width: 100%;
+  background-color: var(--blue);
+  /* border: var(--lblue) solid 2px; */
+  box-shadow: inset 0 0 5px var(--bg0_h);
+}
+
+.headerbar h1 {
+  font-family: IBM Plex Mono, monospace;
+  /* padding: 1cm; */
+  padding: 0.25cm;
+  margin: 1cm;
+  text-decoration: underline;
+  text-shadow: 0 0 5px var(--bg0_h);
+}
+
+/*
+ * Menu Elements
+ * */
+div.menubar {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex: 1;
+}
+
+.menubar a {
+  text-decoration: none;
+  padding: 10px;
+  margin-top: 1cm;
+  margin-bottom: 1cm;
+  /*background-color: var(--bg4);*/
+  background-image: linear-gradient(var(--bg4), var(--bg2));
+  border-right: var(--bg4) solid 1px;
+}
+
+.menubar a:first-of-type {
+  border-top-left-radius: 0.1cm;
+  border-bottom-left-radius: 0.1cm;
+}
+
+.menubar a:last-of-type {
+  border-top-right-radius: 0.1cm;
+  border-bottom-right-radius: 0.1cm;
+  border-right: none;
+}
+
+.menubar a:hover {
+  /* filter: invert(100%); */
+  background-image: linear-gradient(var(--bg2), var(--bg4));
+}
+
+
+div.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* max-width: 50%; */
+  padding: 10px;
+  border-radius: 4px;
+  background: var(--bg1);
+  box-shadow: 0 0 4px 1px var(--bg0_h);
+  padding: 0.5cm;
+}
+
+button.create-curve {
+  background: salmon;
+  color: white;
+  border: none;
+  padding: 15px 32px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+button.create-curve:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+button.create-curve:active {
+  transform: scale(0.95);
+}
+
+div.content {
+  padding: 10px;
+  max-width: 50%;
+}
+
+.svg-container {
+  padding: 10px;
+  background: BlanchedAlmond;
+  float: left;
+  margin: 10px;
+  box-shadow: 4px 4px 8px grey;
+}
+
+div.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+svg {
+  transform: scale(1, -1);
+}
+*/
+
+.background {
+  fill: ivory;
+}
+
